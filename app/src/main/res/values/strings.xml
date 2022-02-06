@@ -1,0 +1,20 @@
+<resources>
+    <string name="app_name">Mental counting</string>
+
+    <string name="start">Start the game here</string>
+    <string name="score_page">Check your score here</string>
+
+    <string name="operations_count">Number of operations :</string>
+    <string name="percentage_of_success">Percentage of success :</string>
+    <string name="last_correct_operation">Your last successful operation was :</string>
+    <string name="score_suppression">Delete my score</string>
+    <string name="menu">Get me back to the menu !</string>
+
+    <string name="operation_on_screen" translatable="false">5 x 12</string>
+    <string name="correct_answer">Good one !</string>
+    <string name="wrong_answer">Nope !!!</string>
+    <string name="submit">Submit</string>
+
+    <string name="score_page_menu">Score page</string>
+    <string name="score_suppression_menu">Delete your current score</string>
+</resources>
