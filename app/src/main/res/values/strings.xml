@@ -7,14 +7,18 @@
     <string name="operations_count">Number of operations :</string>
     <string name="percentage_of_success">Percentage of success :</string>
     <string name="last_correct_operation">Your last successful operation was :</string>
-    <string name="score_suppression">Delete my score</string>
+    <string name="score_reset">Reset my score</string>
     <string name="menu">Get me back to the menu !</string>
 
     <string name="operation_on_screen" translatable="false">5 x 12</string>
-    <string name="correct_answer">Good one !</string>
-    <string name="wrong_answer">Nope !!!</string>
     <string name="submit">Submit</string>
+    <string name="good_answer">Good answer !</string>
+    <string name="wrong_answer">Wrong answer !</string>
+    <string name="next">Next operation</string>
+    <string name="warning">You submitted without an answer !</string>
 
     <string name="score_page_menu">Score page</string>
     <string name="score_suppression_menu">Delete your current score</string>
+
+    <string name="invalid_operator">Invalid operator</string>
 </resources>

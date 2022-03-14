@@ -6,11 +6,14 @@
     <string name="operations_count">Compteur d\'opérations</string>
     <string name="percentage_of_success">Pourcentage de réussite</string>
     <string name="last_correct_operation">Dernière opération réussie</string>
-    <string name="score_suppression">Effacer mon score</string>
+    <string name="score_reset">Effacer mon score</string>
     <string name="menu">Revenir au menu</string>
-    <string name="correct_answer">Bien joué !</string>
-    <string name="wrong_answer">Ça aurait pu... mais c\'est pas ça</string>
     <string name="submit">Confirmer ma réponse</string>
     <string name="score_page_menu">Page des scores</string>
     <string name="score_suppression_menu">Effacer mon score actuel</string>
+    <string name="invalid_operator">Opérateur invalide</string>
+    <string name="good_answer">Bien joué !</string>
+    <string name="wrong_answer">Dommage…</string>
+    <string name="next">Prochaine opération</string>
+    <string name="warning">Attention ! Une réponse est attendue</string>
 </resources>

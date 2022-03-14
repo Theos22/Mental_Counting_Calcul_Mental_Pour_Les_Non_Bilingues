@@ -5,11 +5,13 @@
     <item
         android:id="@+id/menu_to_score"
         android:title="@string/score_page_menu"
+        app:showAsAction="always"
         />
 
     <item
         android:id="@+id/delete_score_from_menu"
         android:title="@string/score_suppression_menu"
+        app:showAsAction="always"
         />
 
 </menu>
