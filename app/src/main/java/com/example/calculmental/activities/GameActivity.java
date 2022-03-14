@@ -2,7 +2,6 @@ package com.example.calculmental.activities;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
@@ -28,13 +27,22 @@ public class GameActivity extends AppCompatActivity {
         setContentView(R.layout.activity_game);
 
         et = findViewById(R.id.answer);
-        TextView tw = findViewById(R.id.current_operation);
+        TextView twCurrentOperation = findViewById(R.id.current_operation);
+        TextView twGoodAnswer = findViewById(R.id.good_answer);
+        TextView twWrongAnswer = findViewById(R.id.wrong_answer);
+        TextView twWarning = findViewById(R.id.warning);
+
+        twGoodAnswer.setVisibility(View.INVISIBLE);
+        twWrongAnswer.setVisibility(View.INVISIBLE);
+        twWarning.setVisibility(View.INVISIBLE);
 
         OperationService os = new OperationService();
         om = os.generateRandomOperation();
 
-        String operation = om.getFirstNumber() + "   " + om.getOperator() + "   " + om.getSecondNumber();
-        tw.setText(operation);
+        String operation = "(( " + om.getFirstNumber() + " " + om.getFirstOperator() + " " + om.getSecondNumber() + " ) "
+                + om.getSecondOperator() + " " + om.getThirdNumber() + " ) "
+                + om.getThirdOperator() + " " + om.getFourthNumber();
+        twCurrentOperation.setText(operation);
 
         Button SubmitButton = findViewById(R.id.submit_button);
         Button MenuButton = findViewById(R.id.menu_button);
@@ -42,54 +50,49 @@ public class GameActivity extends AppCompatActivity {
 
         SubmitButton.setOnClickListener(view -> {
             try {
-                submit();
+                submit(twGoodAnswer, twWrongAnswer, twWarning);
             } catch(OperatorException e) {
                 e.printStackTrace();
             }
         });
 
-        MenuButton.setOnClickListener(view -> finish());
+        MenuButton.setOnClickListener(view -> openMenuPage());
         NextButton.setOnClickListener(view -> newOperation());
 
     }
 
+    private void openMenuPage() {
+
+        Intent openMenuPage = new Intent(this, MainActivity.class);
+        startActivity(openMenuPage);
+
+    }
+
     private void newOperation() {
-
-        TextView twGoodAnswer = findViewById(R.id.good_answer);
-        twGoodAnswer.setVisibility(View.INVISIBLE);
-
-        TextView twWrongAnswer = findViewById(R.id.wrong_answer);
-        twWrongAnswer.setVisibility(View.INVISIBLE);
 
         Intent openGamePage = new Intent(this, GameActivity.class);
         startActivity(openGamePage);
 
     }
 
-    private void submit() throws OperatorException {
+    private void submit(TextView twGoodAnswer, TextView twWrongAnswer, TextView twWarning) throws OperatorException {
 
+        VerificationService vs = new VerificationService();
         String answer = et.getText().toString();
 
         if(answer.equals("")) {
-            TextView tw = findViewById(R.id.warning);
-            tw.setVisibility(View.VISIBLE);
+            twGoodAnswer.setVisibility(View.INVISIBLE);
+            twWrongAnswer.setVisibility(View.INVISIBLE);
+            twWarning.setVisibility(View.VISIBLE);
         } else {
-            int answerAsAnInt = Integer.parseInt(answer);
-            verification(answerAsAnInt);
-        }
-
-    }
-
-    private void verification(int result) throws OperatorException {
-
-        VerificationService vs = new VerificationService();
-
-        if(vs.verifyEquality(om, result)){
-            TextView tw = findViewById(R.id.good_answer);
-            tw.setVisibility(View.VISIBLE);
-        } else {
-            TextView tw = findViewById(R.id.wrong_answer);
-            tw.setVisibility(View.VISIBLE);
+            if(vs.verifyEquality(om, Integer.parseInt(answer))){
+                twGoodAnswer.setVisibility(View.VISIBLE);
+                twWrongAnswer.setVisibility(View.INVISIBLE);
+            } else {
+                twGoodAnswer.setVisibility(View.INVISIBLE);
+                twWrongAnswer.setVisibility(View.VISIBLE);
+            }
+            twWarning.setVisibility(View.INVISIBLE);
         }
 
     }

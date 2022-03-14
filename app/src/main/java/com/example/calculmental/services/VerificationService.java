@@ -13,10 +13,14 @@ public class VerificationService {
     public int operationResult(OperationModel om) throws OperatorException {
         int firstNumber = om.getFirstNumber();
         int secondNumber = om.getSecondNumber();
+        int thirdNumber = om.getThirdNumber();
+        int fourthNumber = om.getFourthNumber();
         int result = 0;
-        String operator = om.getOperator();
+        String firstOperator = om.getFirstOperator();
+        String secondOperator = om.getSecondOperator();
+        String thirdOperator = om.getThirdOperator();
 
-        switch (operator) {
+        switch (firstOperator) {
             case "+":
                 result = firstNumber + secondNumber;
                 break;
@@ -28,6 +32,34 @@ public class VerificationService {
                 break;
             case "*":
                 result = firstNumber * secondNumber;
+                break;
+            default:
+                throw new OperatorException("@string/invalid_operator");
+        }
+
+        switch (secondOperator) {
+            case "+":
+                result += thirdNumber;
+                break;
+            case "-":
+                result -= thirdNumber;
+                break;
+            case "*":
+                result *= thirdNumber;
+                break;
+            default:
+                throw new OperatorException("@string/invalid_operator");
+        }
+
+        switch (thirdOperator) {
+            case "+":
+                result += fourthNumber;
+                break;
+            case "-":
+                result -= fourthNumber;
+                break;
+            case "*":
+                result *= fourthNumber;
                 break;
             default:
                 throw new OperatorException("@string/invalid_operator");

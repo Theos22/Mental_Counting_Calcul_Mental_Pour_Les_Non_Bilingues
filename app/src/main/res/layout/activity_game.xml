@@ -17,8 +17,9 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/warning"
-            android:textColor="@color/black"
-            tools:visibility="invisible" />
+            android:textColor="@color/my_orange"
+            android:textSize="20sp"
+            tools:visibility="visible" />
 
         <TextView
             android:id="@+id/current_operation"
@@ -26,6 +27,7 @@
             android:layout_height="wrap_content"
             android:text="@string/operation_on_screen"
             android:textColor="@color/black"
+            android:textSize="20sp"
             tools:visibility="visible" />
 
         <EditText
@@ -42,7 +44,8 @@
             android:layout_height="wrap_content"
             android:text="@string/good_answer"
             android:textColor="@color/my_green"
-            tools:visibility="invisible" />
+            android:textSize="20sp"
+            tools:visibility="visible" />
 
         <TextView
             android:id="@+id/wrong_answer"
@@ -50,7 +53,8 @@
             android:layout_height="wrap_content"
             android:text="@string/wrong_answer"
             android:textColor="@color/my_red"
-            tools:visibility="invisible" />
+            android:textSize="20sp"
+            tools:visibility="visible" />
 
         <Space
             android:layout_width="match_parent"
