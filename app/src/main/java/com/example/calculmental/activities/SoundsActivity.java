@@ -1,29 +1,32 @@
 package com.example.calculmental.activities;
 
-import androidx.annotation.NonNull;
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.os.Bundle;
-import android.view.MenuItem;
-import android.widget.Button;
 import android.view.Menu;
 import android.view.MenuInflater;
+import android.view.MenuItem;
+import android.widget.Button;
+
+import androidx.annotation.NonNull;
+import androidx.appcompat.app.AppCompatActivity;
 
 import com.example.calculmental.R;
 
-public class ScoreActivity extends AppCompatActivity {
+public class SoundsActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
 
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_score);
+        setContentView(R.layout.activity_sounds);
 
-        Button ResetButton = findViewById(R.id.reset_button);
+        Button SoundOnButton = findViewById(R.id.sound_on_button);
+        Button SoundOffButton = findViewById(R.id.sound_off_button);
 
-        ResetButton.setOnClickListener(view -> reset());
+        SoundOnButton.setOnClickListener(view -> soundOn());
+        SoundOffButton.setOnClickListener(view-> soundOff());
+
     }
 
     @Override
@@ -40,7 +43,7 @@ public class ScoreActivity extends AppCompatActivity {
     @Override
     public boolean onOptionsItemSelected(@NonNull MenuItem item) {
 
-        int id  = item.getItemId();
+        int id = item.getItemId();
 
         switch (id) {
             case R.id.menu_to_main:
@@ -60,6 +63,11 @@ public class ScoreActivity extends AppCompatActivity {
 
     }
 
-    private void reset() { /* accès à la BDD */ }
+    private void soundOn() {
 
+    }
+
+    private void soundOff() {
+
+    }
 }

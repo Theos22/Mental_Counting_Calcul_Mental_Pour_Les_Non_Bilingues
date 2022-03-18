@@ -1,15 +1,19 @@
 <resources>
+    <!-- Name of the application -->
     <string name="app_name">Mental counting</string>
 
+    <!-- Home page related -->
     <string name="start">Start the game here</string>
     <string name="score_page">Check your score here</string>
+    <string name="settings">settings</string>
 
+    <!-- Score page related -->
     <string name="operations_count">Number of operations :</string>
     <string name="percentage_of_success">Percentage of success :</string>
     <string name="last_correct_operation">Your last successful operation was :</string>
     <string name="score_reset">Reset my score</string>
-    <string name="menu">Get me back to the menu !</string>
 
+    <!-- Game page related -->
     <string name="operation_on_screen" translatable="false">---</string>
     <string name="submit">Submit</string>
     <string name="good_answer">Good answer !</string>
@@ -17,8 +21,29 @@
     <string name="next">Next operation</string>
     <string name="warning">You submitted without an answer !</string>
 
-    <string name="score_page_menu">Score page</string>
-    <string name="score_suppression_menu">Delete your current score</string>
+    <!-- Settings page related -->
+    <string name="languages_button">Languages</string>
+    <string name="sounds_button">Sounds</string>
 
+    <!-- Languages page related -->
+    <string name="languages_explication">Change the app language down here</string>
+    <string name="english_button">English</string>
+    <string name="french_button">French</string>
+    <string name="italian_button">Italian</string>
+    <string name="german_button">German</string>
+    <string name="spanish_button">Spanish</string>
+
+    <!-- Sounds page related -->
+    <string name="sounds_explication">Activate in-game sound ?</string>
+    <string name="sound_on_button">ON</string>
+    <string name="sound_off_button">OFF</string>
+
+    <!-- Top menu related -->
+    <string name="menu_to_main">Home</string>
+    <string name="menu_to_game">Game</string>
+    <string name="menu_to_score">Score</string>
+
+    <!-- Error related -->
     <string name="invalid_operator">Invalid operator</string>
+
 </resources>

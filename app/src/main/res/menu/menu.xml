@@ -3,14 +3,20 @@
     xmlns:android="http://schemas.android.com/apk/res/android">
 
     <item
-        android:id="@+id/menu_to_score"
-        android:title="@string/score_page_menu"
+        android:id="@+id/menu_to_main"
+        android:title="@string/menu_to_main"
         app:showAsAction="always"
         />
 
     <item
-        android:id="@+id/delete_score_from_menu"
-        android:title="@string/score_suppression_menu"
+        android:id="@+id/menu_to_game"
+        android:title="@string/menu_to_game"
+        app:showAsAction="always"
+        />
+
+    <item
+        android:id="@+id/menu_to_score"
+        android:title="@string/menu_to_score"
         app:showAsAction="always"
         />
 

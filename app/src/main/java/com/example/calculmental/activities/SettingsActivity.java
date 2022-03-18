@@ -6,24 +6,27 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.os.Bundle;
-import android.view.MenuItem;
-import android.widget.Button;
 import android.view.Menu;
 import android.view.MenuInflater;
+import android.view.MenuItem;
+import android.widget.Button;
 
 import com.example.calculmental.R;
 
-public class ScoreActivity extends AppCompatActivity {
+public class SettingsActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
 
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_score);
+        setContentView(R.layout.activity_settings);
 
-        Button ResetButton = findViewById(R.id.reset_button);
+        Button GameButton = findViewById(R.id.languages_button);
+        Button ScoreButton = findViewById(R.id.sound_button);
 
-        ResetButton.setOnClickListener(view -> reset());
+        GameButton.setOnClickListener(view -> openLanguagesPage());
+        ScoreButton.setOnClickListener(view-> openSoundsPage());
+
     }
 
     @Override
@@ -40,7 +43,7 @@ public class ScoreActivity extends AppCompatActivity {
     @Override
     public boolean onOptionsItemSelected(@NonNull MenuItem item) {
 
-        int id  = item.getItemId();
+        int id = item.getItemId();
 
         switch (id) {
             case R.id.menu_to_main:
@@ -60,6 +63,18 @@ public class ScoreActivity extends AppCompatActivity {
 
     }
 
-    private void reset() { /* accès à la BDD */ }
+    private void openLanguagesPage() {
+
+        Intent openLanguagesPage = new Intent(this, LanguagesActivity.class);
+        startActivity(openLanguagesPage);
+
+    }
+
+    private void openSoundsPage() {
+
+        Intent openSoundsPage = new Intent(this, SoundsActivity.class);
+        startActivity(openSoundsPage);
+
+    }
 
 }

@@ -34,9 +34,9 @@
             android:id="@+id/answer"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:hint="2022"
             android:inputType="number"
-            tools:visibility="visible" />
+            tools:visibility="visible"
+            android:hint="-???-" />
 
         <TextView
             android:id="@+id/good_answer"
@@ -59,7 +59,7 @@
         <Space
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:minHeight="50dp"/>
+            android:minHeight="30dp" />
 
         <Button
             android:id="@+id/submit_button"
@@ -67,22 +67,16 @@
             android:layout_height="wrap_content"
             android:text="@string/submit" />
 
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:minHeight="150dp" />
+
         <Button
             android:id="@+id/next_button"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/next" />
-
-        <Space
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:minHeight="200dp"/>
-
-        <Button
-            android:id="@+id/menu_button"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/menu" />
 
     </LinearLayout>
 

@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".activities.MainActivity">
+    tools:context=".activities.SoundsActivity">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -12,11 +12,13 @@
         android:gravity="center"
         android:orientation="vertical">
 
-        <Button
-            android:id="@+id/start_game_button"
+        <TextView
+            android:id="@+id/sounds_explication"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/start" />
+            android:text="@string/sounds_explication"
+            android:textSize="20sp"
+            tools:visibility="visible" />
 
         <Space
             android:layout_width="match_parent"
@@ -24,21 +26,21 @@
             android:minHeight="30dp"/>
 
         <Button
-            android:id="@+id/score_page_button"
+            android:id="@+id/sound_on_button"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/score_page" />
+            android:text="@string/sound_on_button" />
 
         <Space
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:minHeight="30dp"/>
+            android:minHeight="10dp"/>
 
         <Button
-            android:id="@+id/settings_page_button"
+            android:id="@+id/sound_off_button"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/settings" />
+            android:text="@string/sound_off_button" />
 
     </LinearLayout>
 

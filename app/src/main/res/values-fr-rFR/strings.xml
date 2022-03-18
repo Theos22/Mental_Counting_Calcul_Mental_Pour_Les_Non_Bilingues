@@ -1,19 +1,49 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <!-- Nom de l'application -->
     <string name="app_name">Mental counting</string>
+
+    <!-- Page d'accueil -->
     <string name="start">Commencer</string>
     <string name="score_page">Page de score</string>
+    <string name="settings">Réglages</string>
+
+    <!-- Page de score -->
     <string name="operations_count">Compteur d\'opérations</string>
     <string name="percentage_of_success">Pourcentage de réussite</string>
     <string name="last_correct_operation">Dernière opération réussie</string>
     <string name="score_reset">Effacer mon score</string>
-    <string name="menu">Revenir au menu</string>
+
+    <!-- Page de jeu -->
     <string name="submit">Confirmer ma réponse</string>
-    <string name="score_page_menu">Page des scores</string>
-    <string name="score_suppression_menu">Effacer mon score actuel</string>
-    <string name="invalid_operator">Opérateur invalide</string>
     <string name="good_answer">Bien joué !</string>
     <string name="wrong_answer">Dommage…</string>
     <string name="next">Prochaine opération</string>
     <string name="warning">Attention ! Une réponse est attendue</string>
+
+    <!-- Paramètres -->
+    <string name="languages_button">Langues</string>
+    <string name="sounds_button">Son</string>
+
+    <!-- Langues -->
+    <string name="languages_explication">Change la langue de l\'application ici</string>
+    <string name="english_button">Anglais</string>
+    <string name="french_button">Français</string>
+    <string name="italian_button">Italien</string>
+    <string name="german_button">Allemand</string>
+    <string name="spanish_button">Espagnol</string>
+
+    <!-- Sons -->
+    <string name="sounds_explication">Activer le son en jeu ?</string>
+    <string name="sound_on_button">Oui</string>
+    <string name="sound_off_button">Non</string>
+
+    <!-- Barre de menu -->
+    <string name="menu_to_main">Accueil</string>
+    <string name="menu_to_game">Calcul Mental</string>
+    <string name="menu_to_score">Score</string>
+
+    <!-- Erreurs -->
+    <string name="invalid_operator">Opérateur invalide</string>
+
 </resources>
